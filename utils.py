@@ -67,7 +67,6 @@ def performance_model(X_test, y_test, predicted, clf):
     # `y_pred`, one can still build a :func:`~sklearn.metrics.classification_report`
     # as follows:
 
-
     # The ground truth and predicted lists
     y_true = []
     y_pred = []
@@ -84,3 +83,4 @@ def performance_model(X_test, y_test, predicted, clf):
         "Classification report rebuilt from confusion matrix:\n"
         f"{metrics.classification_report(y_true, y_pred)}\n"
     )
+
