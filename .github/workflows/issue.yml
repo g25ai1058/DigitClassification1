@@ -1,0 +1,22 @@
+name: Issue Gatekeeper
+on:
+issues:
+types: [opened]
+jobs:
+automate-issue:
+runs-on: ubuntu-latest
+permissions:
+issues: write
+steps:
+- name: Welcome Comment
+uses: peter-evans/create-or-update-comment@v3with:
+issue-number: ${{ github.event.issue.number }}
+body: |
+Hello @${{ github.actor }}!
+Thank you for reporting this to the DigitClassification
+project.
+A maintainer will look into this shortly.
+- name: Add 'Triage' Label
+uses: actions-ecosystem/action-add-labels@v1
+with:
+labels: triage
