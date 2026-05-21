@@ -17,7 +17,7 @@ jobs:
       - name: List files in the repository
         run: ls -r ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
-      - name: Install dependencies
-        run: pip3 install --no-cache-dir -r requirements.txt
+      #- name: Install dependencies
+       # run: pip3 install --no-cache-dir -r requirements.txt
       - name: Run experiment
         run: python plot_digits_classification.py
