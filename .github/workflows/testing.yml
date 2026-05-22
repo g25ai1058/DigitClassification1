@@ -21,3 +21,5 @@ jobs:
         run: pip3 install --no-cache-dir -r requirements.txt
       - name: Run experiment
         run: python plot_digits_classification.py
+      - name: Run py test
+        run: pytest 
