@@ -32,6 +32,9 @@ from sklearn.model_selection import train_test_split
 # Note: if we were working from image files (e.g., 'png' files), we would load
 # them using :func:`matplotlib.pyplot.imread`.
 
+import pdb
+pdb.set_trace()
+
 digits = datasets.load_digits()
 
 _, axes = plt.subplots(nrows=1, ncols=4, figsize=(10, 3))
